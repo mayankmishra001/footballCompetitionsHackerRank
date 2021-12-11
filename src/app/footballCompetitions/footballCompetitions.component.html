@@ -1,0 +1,14 @@
+<div class="layout-column align-items-center mt-50">
+  <section class="layout-row align-items-center justify-content-center" data-test-id="page-number-buttons">
+    <button (click)="checkData(i+1)" *ngFor='let in of counter(form.pageNo) ;let i = index'>
+{{i+1}}
+    </button>
+   
+  </section>
+
+  <ul class="mt-50 styled" data-test-id="football-competitions">
+    <li class="slide-up-fade-in py-10" *ngFor="let e of form.data; let i = index  " >
+Competition {{e.name}} won by {{e.winner}} in year {{e.year}}
+    </li>
+  </ul>
+</div>

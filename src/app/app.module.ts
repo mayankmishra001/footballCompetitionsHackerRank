@@ -1,31 +1,26 @@
+import {BrowserModule} from '@angular/platform-browser';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 
-import { BrowserModule } from '@angular/platform-browser';
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
-
-import { SurveyList } from './surveyList/surveyList.component';
-import { Filters } from './filters/filters.component';
-import { RouterModule } from '@angular/router';
-import { RouterTestingModule } from '@angular/router/testing';
+import {AppComponent} from './app.component';
+import {FootballCompetitions} from './footballCompetitions/footballCompetitions.component';
+import {RouterModule} from '@angular/router';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
-    SurveyList,
-    Filters
+    FootballCompetitions
   ],
   imports: [
     BrowserModule,
-    RouterTestingModule,
+    HttpClientModule,
     RouterModule.forRoot([
-      { path:'', component: SurveyList }
+      {path: '', component: FootballCompetitions}
     ])
-  ],
-  exports: [
-    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent],
   schemas : [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule { }
+export class AppModule {
+}

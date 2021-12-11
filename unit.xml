@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<testsuite name="HeadlessChrome 78.0.3904 (Linux 0.0.0)" package="unit" timestamp="2021-12-11T09:26:40" id="0" hostname="workspaceq0br1kw8ganq37am.ws-cff88dd5b-ths56" tests="4" errors="0" failures="1" time="0.254">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/78.0.3904.108 Safari/537.36"/>
+  </properties>
+  <testcase name="FootballCompetitions Should show correct results when page 3 is clicked" time="0.074" classname=".FootballCompetitions"/>
+  <testcase name="FootballCompetitions Should show correct results when page 4 is clicked" time="0.022" classname=".FootballCompetitions"/>
+  <testcase name="FootballCompetitions Should render the Initial UI as expected" time="0.143" classname=".FootballCompetitions">
+    <failure type="">Error: Expected 0 to equal 10.
+    at &lt;Jasmine&gt;
+    at http://localhost:9876/_karma_webpack_/src/app/footballCompetitions/footballCompetitions.component.spec.ts:140:42
+    at &lt;Jasmine&gt;
+    at fulfilled (http://localhost:9876/_karma_webpack_/node_modules/tslib/tslib.es6.js:71:42)
+</failure>
+    <failure type="">TypeError: Cannot read property 'innerHTML' of undefined
+    at &lt;Jasmine&gt;
+    at http://localhost:9876/_karma_webpack_/src/app/footballCompetitions/footballCompetitions.component.spec.ts:141:37
+    at &lt;Jasmine&gt;
+    at fulfilled (http://localhost:9876/_karma_webpack_/node_modules/tslib/tslib.es6.js:71:42)
+    at ZoneDelegate.invoke (http://localhost:9876/_karma_webpack_/node_modules/zone.js/dist/zone-evergreen.js:364:1)
+    at ProxyZoneSpec.push../node_modules/zone.js/dist/zone-testing.js.ProxyZoneSpec.onInvoke (http://localhost:9876/_karma_webpack_/node_modules/zone.js/dist/zone-testing.js:292:1)
+    at ZoneDelegate.invoke (http://localhost:9876/_karma_webpack_/node_modules/zone.js/dist/zone-evergreen.js:363:1)
+    at Zone.run (http://localhost:9876/_karma_webpack_/node_modules/zone.js/dist/zone-evergreen.js:123:1)
+    at http://localhost:9876/_karma_webpack_/node_modules/zone.js/dist/zone-evergreen.js:857:1
+    at ZoneDelegate.invokeTask (http://localhost:9876/_karma_webpack_/node_modules/zone.js/dist/zone-evergreen.js:399:1)
+    at ProxyZoneSpec.push../node_modules/zone.js/dist/zone-testing.js.ProxyZoneSpec.onInvokeTask (http://localhost:9876/_karma_webpack_/node_modules/zone.js/dist/zone-testing.js:323:1)
+</failure>
+  </testcase>
+  <testcase name="FootballCompetitions Should show correct results when page 2 is clicked" time="0.015" classname=".FootballCompetitions"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

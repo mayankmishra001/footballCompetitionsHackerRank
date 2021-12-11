@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "surveyLists": {
+    "footballCompetitions": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,12 +17,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/surveyLists",
+            "outputPath": "dist/footballCompetitions",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
+            "aot": false,
             "assets": [
               "src/favicon.ico",
               "src/assets",
@@ -50,6 +50,7 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
+              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -71,18 +72,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "surveyLists:build"
+            "browserTarget": "footballCompetitions:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "surveyLists:build:production"
+              "browserTarget": "footballCompetitions:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "surveyLists:build"
+            "browserTarget": "footballCompetitions:build"
           }
         },
         "test": {
@@ -102,19 +103,32 @@
             "scripts": []
           }
         },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "surveyLists:serve"
+            "devServerTarget": "footballCompetitions:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "surveyLists:serve:production"
+              "devServerTarget": "footballCompetitions:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "surveyLists"
+  "defaultProject": "footballCompetitions"
 }
